@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
 def home(request):
-    return render(request, 'things/home.html')
+    html = "<html><head><title>Things</title><body><h1>Things</h1></body></head></html>"
+    return HttpResponse(html)
